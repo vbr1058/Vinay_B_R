@@ -1,0 +1,20 @@
+<svg width="260" height="320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background (no big white rect fill) -->
+  <!-- Paper outline with dog-ear, all in #ffdb6f -->
+  <rect x="15" y="15" width="230" height="290" fill="none" stroke="#ffdb6f" stroke-width="15"/>
+  <polyline points="245,15 245,65 195,15" fill="none" stroke="#ffdb6f" stroke-width="15"/>
+  <!-- First row (with colored tick), box in #ffdb6f -->
+  <rect x="55" y="60" width="45" height="45" fill="none" stroke="#ffdb6f" stroke-width="10"/>
+  <rect x="120" y="75" width="90" height="15" fill="#ffdb6f" stroke="none"/>
+  <!-- Colored tick mark inside first box -->
+  <polyline points="70,83 80,100 95,72" fill="none" stroke="#ffdb6f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Second row -->
+  <rect x="55" y="115" width="45" height="45" fill="none" stroke="#ffdb6f" stroke-width="10"/>
+  <rect x="120" y="130" width="90" height="15" fill="#ffdb6f" stroke="none"/>
+  <!-- Third row -->
+  <rect x="55" y="170" width="45" height="45" fill="none" stroke="#ffdb6f" stroke-width="10"/>
+  <rect x="120" y="185" width="90" height="15" fill="#ffdb6f" stroke="none"/>
+  <!-- Fourth row -->
+  <rect x="55" y="225" width="45" height="45" fill="none" stroke="#ffdb6f" stroke-width="10"/>
+  <rect x="120" y="240" width="90" height="15" fill="#ffdb6f" stroke="none"/>
+</svg>
