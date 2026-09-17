@@ -1,706 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vinay B R - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinay B R — AI Engineer | AI QA &amp; Test Automation</title>
+  <meta name="description" content="Vinay B R — AI Engineer & AI Quality Engineer. Bridging rigorous test automation discipline with building and validating AI/LLM systems: agents, RAG pipelines, and autonomous systems." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Apply saved theme before first paint (dark is default)
+    try { if (localStorage.getItem("theme") === "light") document.documentElement.classList.add("light"); } catch (e) {}
+  </script>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js" } }
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Vinay B R" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Vinay B R">Vinay B R</h1>
-
-          <p class="title">Senior SDET</p>
-
-          <div style="margin-top: 10px;" class="title">
-            <a href="https://drive.google.com/file/d/1SMK0-Em4_KERAnusGvNOaEfLOFCVOAMc/view?usp=sharing" class="title" target="_blank" style="text-decoration: none; color: inherit;">View Resume</a>
-          </div>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#hero">Vinay<span> B R</span></a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-resume-item"><a class="btn btn-primary btn-sm" href="Vinay_B_R_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+          </svg>
         </button>
-
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg class="icon-burger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:vbr1058@gmail.com" class="contact-link">vbr1058@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+917619415101" class="contact-link">+91 7619415101</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-
-              <a href="https://www.linkedin.com/in/vinay-b-r-8398a6191/" class="contact-link" target="_blank">View Vinay B R Profile</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Bangalore, Karnataka, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/vinay-b-r-8398a6191/" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/vinay-b-r" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a Senior SDET based in Bangalore, India, with expertise in test automation, CI/CD pipelines, and
-            AI-assisted development. I specialize in building scalable test frameworks, REST API testing, and
-            performance testing solutions.
-          </p>
-
-          <p>
-            With experience at companies like OpenText, RedBus, and Mindtree, I've architected end-to-end test
-            frameworks, streamlined CI/CD pipelines reducing deployment time by 50%, and engineered parallel execution
-            frameworks reducing regression suite runtime by 60%. I leverage AI tools like GPT-4, Claude, and GitHub
-            Copilot to accelerate test generation and improve code quality.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="automation icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Test Automation</h4>
-
-                <p class="service-item-text">
-                  Building scalable test frameworks with Selenium Grid, RestAssured, and parallel execution strategies.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="CI/CD icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">CI/CD & DevOps</h4>
-
-                <p class="service-item-text">
-                  Streamlining Jenkins pipelines with Docker, reducing deployment time and manual intervention.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="API icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">API Development & Testing</h4>
-
-                <p class="service-item-text">
-                  REST API testing with Postman, RestAssured, and building APIs with Flask and FastAPI.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="AI icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI/ML & LLM Integration</h4>
-
-                <p class="service-item-text">
-                  Leveraging GPT-4, Claude, LangChain, and RAG for intelligent test generation and automation.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Leadership & Awards</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-dev.svg" alt="OpenText" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Best QA Award — OpenText</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Recognized for designing and delivering a complete test framework with CI/CD pipeline integration
-                    within 4 days — exceptional delivery speed and quality.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-app.svg" alt="RedBus" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Technology Excellence Award — RailBot 2.0</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Recognized for AI innovation with RailBot 2.0, demonstrating cutting-edge application of AI/ML
-                    technologies in test automation.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-design.svg
-                  " alt="Mindtree" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>CI/CD Excellence — Mindtree</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Reduced Time-to-Production by 30% through Jenkins CI/CD Integration, optimizing Docker layer caching
-                    and parallelizing test stages.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/icon-dev.svg" alt="Award" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Best QA Award</h4>
-
-              <time datetime="2025-08-01">August, 2025</time>
-
-              <div data-modal-text>
-                <p>
-                  Recognized for designing and delivering a complete test framework with CI/CD pipeline integration
-                  within 4 days — exceptional delivery speed and quality.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="scene" aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+        <p class="hero-eyebrow">I break systems — so they come back stronger</p>
+        <h1>Vinay B R</h1>
+        <p class="hero-title">AI Engineer <span aria-hidden="true">|</span> AI QA &amp; Test Automation</p>
+        <p class="hero-tagline">
+          I bring rigorous testing discipline to building and validating AI systems —
+          agents, RAG pipelines, and LLM-powered products that behave reliably,
+          accurately, and safely in production.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="Vinay_B_R_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+          <!-- [ADD LINK] GitHub URL is not on the resume — replace href="#" -->
+          <!-- <a class="btn btn-icon" href="#" aria-label="GitHub profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.32-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          </a> -->
+          <a class="btn btn-icon" href="https://www.linkedin.com/in/vinay-b-r-8398a6191/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg>
+          </a>
         </div>
+        <a class="scroll-hint" href="#about" aria-label="Scroll to About section">
+          Scroll
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14m0 0-5-5m5 5 5-5"/></svg>
+        </a>
+        </div>
+        <div class="hero-photo">
+          <picture>
+            <source srcset="assets/profile.webp" type="image/webp" />
+            <img src="assets/profile.png" alt="Vinay B R" width="826" height="1000" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </section>
 
-
-        <!--
-          - clients (removed - not applicable)
-        -->
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume  active" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Programming & Testing</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-              <p style="margin-top: 8px; color: hsl(0, 0%, 84%); font-size: 13px;">Java, Python, SQL, Selenium, Playwright, TestNG, JUnit, Appium, RestAssured, Postman, JMeter, k6, DSA</p>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">DevOps & Cloud</h5>
-                <data value="85">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
-              <p style="margin-top: 8px; color: hsl(0, 0%, 84%); font-size: 13px;">Git, CI/CD, Docker, Jenkins, Microservices, Swagger, AWS, FastAPI, Flask, Streamlit</p>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">AI/ML & LLM Tools</h5>
-                <data value="95">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
-              </div>
-
-              <p style="margin-top: 8px; color: hsl(0, 0%, 84%); font-size: 13px;">OpenAI API, LangChain, GPT-4, GPT-4o-mini, LLaMA, Claude Sonnet, Gemini, RAG, Embeddings, Prompt Optimization, Function Calling</p>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Databases</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-              <p style="margin-top: 8px; color: hsl(0, 0%, 84%); font-size: 13px;">MySQL, PostgreSQL, MongoDB</p>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper" style="margin-top: 20px;">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>From breaking systems to building them.</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm an AI Quality Engineer with 4 years of experience spanning automation testing, software development, and testing AI agents &amp; LLM-powered systems. Currently a Senior SDET at OpenText, previously at RedBus (MakeMyTrip Group) and Mindtree.</p>
+            <p>My career started in hardcore test engineering — Selenium grids, API frameworks, CI/CD pipelines, performance testing. That discipline taught me exactly how software breaks. As LLMs entered production systems, I moved to the frontier: evaluating AI agents for output accuracy, hallucination, tool-use reliability, and edge-case behavior — and building AI-powered tooling of my own.</p>
+            <p>That's my differentiator: <strong>I understand how AI systems are built and how they break.</strong> Most engineers pick a side — I bridge both, applying QA rigor (evaluation frameworks, quality gates, automation) to the non-deterministic world of agents, RAG pipelines, and prompt chains.</p>
+            <div class="edu-card">
+              <p class="edu-school">Dayananda Sagar College of Engineering</p>
+              <p>B.E. in Electronics and Instrumentation Engineering &middot; 2017 – 2021</p>
+              <p class="muted">GPA: 9.10 / 10.0 &middot; Bangalore, Karnataka</p>
             </div>
-
-            <h3 class="h3">Experience</h3>
           </div>
+          <div class="focus reveal">
+            <h3>Focus areas</h3>
+            <ul class="focus-list">
+              <li>Testing AI Agents &amp; Autonomous Systems</li>
+              <li>LLM Evaluation — hallucination detection, output accuracy, tool-use reliability</li>
+              <li>RAG Pipeline &amp; Prompt Chain Validation</li>
+              <li>Agentic Decision Loop Testing</li>
+              <li>AI-Driven QA &amp; Intelligent Test Generation</li>
+              <li>CI/CD Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Senior SDET — OpenText</h4>
-              <span>Aug 2025 — Present</span>
-
-              <p class="timeline-text">
-                Architected and delivered a complete end-to-end test framework within 4 days with full CI/CD pipeline
-                integration. Recipient of the Best QA Award. Leveraged AI-assisted development tools (Claude, GitHub
-                Copilot, Cursor AI) to accelerate framework design and test generation.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">SDET — RedBus</h4>
-
-              <span>2022 — Aug 2025</span>
-
-              <ul class="timeline-text" style="list-style: none; padding-left: 0; line-height: 1.8;">
-                <li style="margin-bottom: 10px;">– Built an <strong style="color: hsl(45, 100%, 72%);">AI-powered test case generation</strong> system and implemented <strong style="color: hsl(45, 100%, 72%);">n8n workflow automation</strong> to streamline daily operations including <strong style="color: hsl(45, 100%, 72%);">Auto Bug Creation with Smart Filtering</strong>, reducing manual triage effort significantly.</li>
-                <li style="margin-bottom: 10px;">– Designed and deployed <strong style="color: hsl(45, 100%, 72%);">Test Data Management Automation</strong> pipelines using <strong style="color: hsl(45, 100%, 72%);">n8n</strong>, enabling on-demand test data provisioning and cleanup across environments.</li>
-                <li style="margin-bottom: 10px;">– Streamlined <strong style="color: hsl(45, 100%, 72%);">Jenkins-based CI/CD pipelines</strong> with <strong style="color: hsl(45, 100%, 72%);">Dockerized test environments</strong>, reducing test deployment time by <strong style="color: hsl(45, 100%, 72%);">50%</strong> and enhancing reporting with <strong style="color: hsl(45, 100%, 72%);">Extent Reports</strong>.</li>
-                <li style="margin-bottom: 10px;">– Orchestrated <strong style="color: hsl(45, 100%, 72%);">automated test execution</strong> using <strong style="color: hsl(45, 100%, 72%);">Jenkins and Docker</strong>, integrating <strong style="color: hsl(45, 100%, 72%);">Extent Reports</strong> for result visualization and achieving a <strong style="color: hsl(45, 100%, 72%);">95% reduction in manual intervention</strong>.</li>
-                <li style="margin-bottom: 10px;">– Engineered scalable <strong style="color: hsl(45, 100%, 72%);">parallel execution frameworks</strong> with <strong style="color: hsl(45, 100%, 72%);">Selenium Grid</strong>, reducing regression suite runtime by <strong style="color: hsl(45, 100%, 72%);">60%</strong>.</li>
-                <li style="margin-bottom: 10px;">– Developed <strong style="color: hsl(45, 100%, 72%);">REST API testing frameworks</strong> using <strong style="color: hsl(45, 100%, 72%);">Postman and RestAssured (Java)</strong>, achieving <strong style="color: hsl(45, 100%, 72%);">100% sanity coverage</strong> and reducing production API defects by <strong style="color: hsl(45, 100%, 72%);">50%</strong>.</li>
-                <li style="margin-bottom: 10px;">– Built <strong style="color: hsl(45, 100%, 72%);">end-to-end mobile automation test suites</strong> with <strong style="color: hsl(45, 100%, 72%);">Appium</strong>, enabling <strong style="color: hsl(45, 100%, 72%);">cross-device testing with 100% sanity coverage</strong> across major devices.</li>
-                <li style="margin-bottom: 10px;">– Created and maintained <strong style="color: hsl(45, 100%, 72%);">performance testing solutions</strong> using <strong style="color: hsl(45, 100%, 72%);">k6 (JavaScript)</strong>.</li>
-                <li style="margin-bottom: 10px;">– Accelerated test case creation by <strong style="color: hsl(45, 100%, 72%);">40%</strong> through an internal <strong style="color: hsl(45, 100%, 72%);">LLM-powered test generator</strong>, utilizing prompt engineering to enhance efficiency and coverage.</li>
-                <li style="margin-bottom: 10px;">– Implemented structured <strong style="color: hsl(45, 100%, 72%);">logging, exception handling, and retry mechanisms</strong> using <strong style="color: hsl(45, 100%, 72%);">Log4j and Java's logging framework</strong> to increase test suite resilience.</li>
-                <li style="margin-bottom: 10px;">– Verified <strong style="color: hsl(45, 100%, 72%);">asynchronous messaging workflows</strong> via <strong style="color: hsl(45, 100%, 72%);">Kafka and RabbitMQ</strong>, building automated validation to ensure <strong style="color: hsl(45, 100%, 72%);">100% message integrity</strong> in distributed systems.</li>
-                <li style="margin-bottom: 10px;">– Designed and executed <strong style="color: hsl(45, 100%, 72%);">quarterly test plans</strong> aligned with the QA roadmap, covering <strong style="color: hsl(45, 100%, 72%);">critical and high-priority stories</strong>, while executing <strong style="color: hsl(45, 100%, 72%);">smoke, sanity, and regression suites</strong> to reduce post-release issues.</li>
-                <li style="margin-bottom: 10px;">– Performed <strong style="color: hsl(45, 100%, 72%);">REST API testing</strong> using <strong style="color: hsl(45, 100%, 72%);">Postman and RestAssured (Java)</strong>, ensuring backend reliability and reducing API-related production incidents by <strong style="color: hsl(45, 100%, 72%);">30%</strong>.</li>
-                <li style="margin-bottom: 10px;">– Maintained <strong style="color: hsl(45, 100%, 72%);">reusable test components, test data strategies, and automation libraries</strong>, and documented test cases and defects in <strong style="color: hsl(45, 100%, 72%);">JIRA and Confluence</strong> to support scalable testing and ensure full traceability.</li>
-                </ul>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer — Mindtree</h4>
-
-              <span>2021 — 2022</span>
-
-              <p class="timeline-text">
-                Revamped Jenkins-based CI/CD pipelines by optimizing Docker layer caching and parallelizing test stages,
-                cutting deployment time by 30%.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've built and broken things</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>OpenText</h3><span class="period">Aug 2025 – Present</span>
             </div>
+            <p class="role">Senior SDET (AI Quality Engineer) &middot; <span class="muted">Bangalore, KA</span></p>
+            <p class="award-chip">★ Best QA Award</p>
+            <ul class="impact">
+              <li>Architected and delivered a production-grade end-to-end test framework within 4 days, fully integrated with CI/CD pipelines — recognized with the Best QA Award.</li>
+              <li>Designed scalable evaluation frameworks for testing AI agents and autonomous systems, covering output accuracy, hallucination detection, tool-use reliability, and edge-case behavior.</li>
+              <li>Built AI-assisted testing workflows using Claude, GitHub Copilot, and Cursor, accelerating test generation, code review, and debugging speed significantly.</li>
+              <li>Integrated AI model output validation (OpenAI, Claude, Gemini) into CI/CD quality gates for continuous LLM quality assurance.</li>
+              <li>Designed frameworks for testing complex microservices architectures and AI-driven system behaviors at scale.</li>
+            </ul>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>RedBus (MakeMyTrip Group)</h3><span class="period">2022 – Aug 2025</span>
+            </div>
+            <p class="role">SDET (Automation, API &amp; AI-Driven Testing) &middot; <span class="muted">Bangalore, KA</span></p>
+            <p class="award-chip">★ Technology Excellence Award — AI innovation on RailBot 2.0</p>
+            <ul class="impact">
+              <li>Built an internal LLM-powered test case generator using prompt engineering, accelerating test creation by 40% and improving coverage quality.</li>
+              <li>Implemented n8n workflow automation for Auto Bug Creation with Smart Filtering, reducing manual triage effort and streamlining defect management.</li>
+              <li>Designed and deployed Test Data Management automation pipelines using n8n, enabling on-demand provisioning and cleanup across environments.</li>
+              <li>Optimized Jenkins-based CI/CD pipelines with Dockerized test environments, reducing deployment time by 50% and achieving a 95% reduction in manual intervention.</li>
+              <li>Engineered scalable parallel execution frameworks using Selenium Grid, reducing regression suite runtime by 60%.</li>
+              <li>Developed REST API testing frameworks using Postman and RestAssured, achieving 100% sanity coverage and reducing production API defects by 50%.</li>
+              <li>Built end-to-end mobile automation test suites with Appium, enabling cross-device testing with 100% sanity coverage across major devices.</li>
+              <li>Implemented performance and load testing with k6; verified async messaging via Kafka and RabbitMQ, ensuring 100% message integrity in distributed systems.</li>
+            </ul>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>Mindtree</h3><span class="period">2021 – 2022</span>
+            </div>
+            <p class="role">Software Engineer &middot; <span class="muted">Bangalore, KA</span></p>
+            <p class="award-chip">★ CI/CD Excellence</p>
+            <ul class="impact">
+              <li>Revamped Jenkins-based CI/CD pipelines by optimizing Docker layer caching and parallelizing test stages, reducing time-to-production by 30%.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-            <h3 class="h3">Education</h3>
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Two disciplines, one toolkit</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3><span class="dot dot-cyan" aria-hidden="true"></span>AI / LLM Engineering</h3>
+            <ul class="tags stagger">
+              <li>AI Agent Evaluation</li><li>LLM Output Validation</li><li>Hallucination Testing</li>
+              <li>RAG Pipeline Testing</li><li>Prompt Engineering (CoT, Few-shot, Zero-shot)</li><li>LLM Observability</li>
+              <li>Function Calling</li><li>Embedding Models</li><li>LangChain</li><li>DeepEval</li>
+              <li>OpenAI API (GPT-4o)</li><li>Claude</li><li>Gemini</li><li>LLaMA</li><li>n8n</li>
+            </ul>
           </div>
+          <div class="skill-card reveal">
+            <h3><span class="dot dot-teal" aria-hidden="true"></span>QA &amp; Test Automation</h3>
+            <ul class="tags stagger">
+              <li>Selenium &amp; Selenium Grid</li><li>Playwright</li><li>Appium</li><li>TestNG</li>
+              <li>JUnit</li><li>RestAssured</li><li>Postman</li><li>JMeter</li><li>k6</li>
+              <li>CI/CD Quality Gates</li><li>Jenkins</li><li>Extent Reports</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3><span class="dot dot-blue" aria-hidden="true"></span>Languages, Backend &amp; Cloud</h3>
+            <ul class="tags stagger">
+              <li>Java</li><li>Python</li><li>SQL</li><li>FastAPI</li><li>Flask</li><li>Streamlit</li>
+              <li>REST APIs</li><li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Docker</li>
+              <li>AWS</li><li>Kafka</li><li>RabbitMQ</li><li>Microservices</li><li>Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <ol class="timeline-list">
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <p class="project-context">OpenText</p>
+            <h3>AI Agent Evaluation Framework</h3>
+            <p>Scalable evaluation framework for AI agents and autonomous systems — measuring output accuracy, hallucination rates, tool-use reliability, and edge-case behavior, wired into CI/CD as continuous LLM quality gates.</p>
+            <ul class="tags"><li>Python</li><li>OpenAI</li><li>Claude</li><li>Gemini</li><li>CI/CD</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-context">RedBus &middot; Technology Excellence Award</p>
+            <h3>RailBot 2.0 — AI in Test Automation</h3>
+            <p>Award-winning application of AI/ML to test automation, recognized company-wide for cutting-edge AI innovation. <span class="placeholder">[ADD DETAILS — what RailBot 2.0 does, your role, outcomes]</span></p>
+            <ul class="tags"><li>AI/ML</li><li>Test Automation</li><li>Python</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-context">RedBus</p>
+            <h3>LLM-Powered Test Case Generator</h3>
+            <p>Internal tool that generates test cases from requirements using prompt engineering — accelerated test creation by 40% and improved coverage quality across teams.</p>
+            <ul class="tags"><li>Prompt Engineering</li><li>OpenAI API</li><li>Python</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-context">RedBus</p>
+            <h3>Auto Bug Creation with Smart Filtering</h3>
+            <p>n8n workflow automation that files bugs automatically from failures with smart filtering, cutting manual triage effort and streamlining defect management end to end.</p>
+            <ul class="tags"><li>n8n</li><li>JIRA</li><li>Workflow Automation</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-context">RedBus</p>
+            <h3>Test Data Management Pipelines</h3>
+            <p>Automated test-data provisioning and cleanup pipelines built on n8n — on-demand, environment-aware data management that removed a chronic bottleneck for automation suites.</p>
+            <ul class="tags"><li>n8n</li><li>SQL</li><li>Automation</li></ul>
+          </article>
+          <article class="project-card reveal">
+            <p class="project-context">RedBus</p>
+            <h3>Dockerized Parallel Test Infrastructure</h3>
+            <p>Jenkins CI/CD pipelines with Dockerized test environments and Selenium Grid parallel execution — 50% faster deployments, 60% faster regression runs, 95% less manual intervention.</p>
+            <ul class="tags"><li>Docker</li><li>Jenkins</li><li>Selenium Grid</li><li>CI/CD</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Dayananda Sagar College of Engineering</h4>
-
-              <span>2017 — 2021</span>
-
-              <p class="timeline-text">
-                B.E. in Electronics and Instrumentation, GPA: 9.10/10.0 — Bangalore, Karnataka
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Indira Pre-University College</h4>
-
-              <span>2015 — 2017</span>
-
-              <p class="timeline-text">
-                Pre-University College, Percentage: 84% — Tumkur, Karnataka
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.49085452656498!3d12.954517009380502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1647608789441!5m2!1sen!2sin"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Get in Touch</h3>
-
-          <ul class="contacts-list">
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-                <address>Bangalore, Karnataka, India</address>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-                <a href="mailto:vbr1058@gmail.com" class="contact-link">vbr1058@gmail.com</a>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-                <a href="tel:+917619415101" class="contact-link">+91 7619415101</a>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/vinay-b-r-8398a6191/" class="contact-link" target="_blank">linkedin.com/in/vinay-b-r</a>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-    </div>
-
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's talk about reliable AI</h2>
+          <div class="rule" aria-hidden="true"></div>
+        </div>
+        <p class="contact-pitch reveal">
+          Building an AI product that has to work <em>every time</em>? That's the
+          problem I love solving. Whether you're shipping agents, RAG pipelines, or
+          LLM-powered features — or you need someone who can prove they actually
+          work — I'd love to hear from you.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:vbr1058@gmail.com">
+            <span class="contact-label">Email</span>vbr1058@gmail.com
+          </a>
+          <a href="tel:+917619415101">
+            <span class="contact-label">Phone</span>+91 76194 15101
+          </a>
+          <a href="https://www.linkedin.com/in/vinay-b-r-8398a6191/" target="_blank" rel="noopener">
+            <span class="contact-label">LinkedIn</span>linkedin.com/in/vinay-b-r-8398a6191
+          </a>
+          <!-- [ADD LINK] GitHub
+          <a href="#">
+            <span class="contact-label">GitHub</span><span class="placeholder">[ADD LINK]</span>
+          </a> -->
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Vinay B R &middot; AI Engineer | AI QA &amp; Test Automation</p>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script type="module" src="js/scene.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>
