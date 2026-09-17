@@ -368,6 +368,32 @@ html.light .hero-photo::before {
   .hero-ctas { justify-content: center; }
 }
 
+/* ---------- Hero stats strip ---------- */
+.hero-stats {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 2.2rem;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--accent-text);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 860px) {
+  .hero-stats { justify-content: center; gap: 0.8rem 1.6rem; }
+}
+
 .scroll-hint {
   display: inline-flex;
   flex-direction: column;
@@ -404,6 +430,7 @@ html.light .hero-photo::before {
 .hero-text > *:nth-child(4) { animation-delay: 0.46s; }
 .hero-text > *:nth-child(5) { animation-delay: 0.58s; }
 .hero-text > *:nth-child(6) { animation-delay: 0.75s; }
+.hero-text > *:nth-child(7) { animation-delay: 0.9s; }
 @keyframes rise {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -439,6 +466,25 @@ html.light .hero-photo::before {
   background: linear-gradient(90deg, var(--accent), #2dd4bf);
 }
 .section-sub { margin-top: 1rem; color: var(--muted); }
+
+/* ---------- Highlights (scannability for recruiters) ---------- */
+/* Key skill / phrase: subtle marker-style highlight */
+.hl {
+  font-weight: 600;
+  color: var(--text-strong);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-radius: 4px;
+  padding: 0.08em 0.28em;
+  /* keep the highlight painted on every line when the phrase wraps */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* Metric / number: bold accent so results pop out of bullets */
+.hl-num {
+  font-weight: 700;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
 
 /* Scroll-reveal */
 .reveal {
